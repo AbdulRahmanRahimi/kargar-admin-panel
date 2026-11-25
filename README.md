@@ -1,16 +1,36 @@
 # Kargar Admin Panel
 
-## Setup
+The web admin panel for **Kargar**, a service-finder app that connects people in Afghanistan with local workers such as electricians, carpenters, painters and drivers. Admins use it to verify new workers before they appear in the public app.
 
-1. Open this folder in VS Code
-2. Open the terminal (Ctrl + `)
-3. Run: npm install
-4. Run: npm run dev
-5. Open http://localhost:3000 in your browser
+## Features
 
-## Login
-Create an admin user in your Supabase project:
-- Supabase dashboard → Authentication → Users → Add user
-- Use that email and password to log in
+- **Dashboard** with counts of pending, approved, flagged and rejected workers
+- **Review queue**: open a worker's profile, work details and Tazkira (ID) photos, then approve, flag or reject
+- **Filters and search** across all registrations
+- **Photo lightbox** for checking ID documents
+- **Secure sign-in** with Supabase Auth; every admin page is behind a protected route
 
-## Supabase credentials are already set in .env
+## Tech stack
+
+| Area | Tools |
+|---|---|
+| UI | React, React Router, CSS Modules |
+| Build | Vite |
+| Backend | Supabase (Postgres, Auth, Storage) |
+| Hosting | Vercel |
+
+## Run locally
+
+```bash
+npm install
+cp .env.example .env   # add your Supabase URL and anon key
+npm run dev
+```
+
+Create an admin user in the Supabase dashboard (Authentication → Users), then sign in.
+
+Related: the Kargar mobile app is built with React Native and Expo.
+
+---
+
+Built by **Abdul Rahman Rahimi**, Software Developer & Geospatial Analyst, [Rahimi Tech Solution](https://github.com/rahimiabdulrahmanab).
